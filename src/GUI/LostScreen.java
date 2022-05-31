@@ -21,6 +21,10 @@ public class LostScreen extends JPanel {
 
     private JLabel lostScoreShow = new JLabel();
     private JLabel lostScore= new JLabel();
+
+    /**
+     * Constructor Lostscreen
+     */
     public LostScreen() {
         this.setLayout(null);
 
@@ -51,13 +55,17 @@ public class LostScreen extends JPanel {
         this.add(lostScore);
     }
 
+    /**
+     * graphical output of the Lostscreen
+     * @param aG the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics aG)
     {
         super.paintComponent(aG);
         try {
             //für den Hintergrund
-            BufferedImage image = ImageIO.read(new File("background.png"));
+            BufferedImage image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/background.png"));
             aG.drawImage(image,-50,-50,1000,1000,null);
 
         } catch (Exception e) {

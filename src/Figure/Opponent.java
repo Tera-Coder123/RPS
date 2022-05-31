@@ -21,19 +21,29 @@ public class Opponent {
     private FigureType type;
     private Timer timer;
 
+    /**
+     * Constructor for Opponent
+     * @param x
+     * @param y
+     * @param type
+     */
     public Opponent(int x, int y,FigureType type) {
         setX(x);
         setY(x);
         setType(type);
     }
 
+    /**
+     * graphical output for Opponent
+     * @param graphics
+     */
     public void paint(Graphics graphics) {
         try {
             BufferedImage image = null;
             switch (getType()) {
-                case ROCK -> image = ImageIO.read(new File("stone.png"));
-                case PAPER -> image = ImageIO.read(new File("paper.png"));
-                case SCISSOR -> image = ImageIO.read(new File("scissors.png"));
+                case ROCK -> image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/stone.png"));
+                case PAPER -> image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/paper.png"));
+                case SCISSOR -> image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/scissors.png"));
             }
             graphics.drawImage(image,getX(),getY(),null);
         } catch (Exception e) {
@@ -41,6 +51,9 @@ public class Opponent {
         }
     }
 
+    /**
+     * Opponent move
+     */
     public void move(){
 
         timer = new Timer(0, new ActionListener() {
@@ -62,26 +75,50 @@ public class Opponent {
         timer.start();
     }
 
+    /**
+     * set x for Opponent
+     * @param x
+     */
     public void setX(int x) {
         this.x = x;
     }
 
+    /**
+     * get X from Opponent
+     * @return
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * set Y for Opponent
+     * @param y
+     */
     public void setY(int y) {
         this.y = y;
     }
 
+    /**
+     * get Y from Opponent
+     * @return
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     * set Type for Opponent
+     * @param type
+     */
     public void setType(FigureType type) {
         this.type = type;
     }
 
+    /**
+     * get Type from Opponent
+     * @return
+     */
     public FigureType getType() {
         return type;
     }

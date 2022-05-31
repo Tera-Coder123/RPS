@@ -16,6 +16,9 @@ import java.awt.event.ActionListener;
 public class GoalManager {
     public static Timer timer;
 
+    /**
+     * check if player is in on Goal and Opponent is on player
+     */
     public static void checkGoal() {
         timer = new Timer(0, new ActionListener() {
             @Override

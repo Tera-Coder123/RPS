@@ -17,6 +17,9 @@ import java.awt.event.ActionListener;
 public class MainFrame extends JFrame {
     public static MainFrame mainFrame;
 
+    /**
+     *
+     */
     public MainFrame() {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,6 +74,9 @@ public class MainFrame extends JFrame {
         mainFrame.add(Playscreen.playscreen);
     }
 
+    /**
+     * Remove current Panel and add lLost screen
+     */
     public static void goToLooseScreen() {
         Playscreen.playscreen.remove(Playscreen.playground);
         GoalManager.timer.stop();

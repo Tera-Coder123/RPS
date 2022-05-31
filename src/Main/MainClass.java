@@ -7,6 +7,10 @@ package Main;
 import GUI.MainFrame;
 
 public class MainClass{
+    /**
+     * Main class
+     * @param args
+     */
     public static void main(String[] args) {
        Game rsp = new Game();
        rsp.setName("Rock Paper Scissors");

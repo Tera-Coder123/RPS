@@ -19,6 +19,10 @@ public class Aboutscreen extends JPanel {
     private static String aboutscreenText = "<html><body>by Maximilian Raidl<br>ein SEW-Projekt<br>Auftrag: Professor Gaisberger</body></html>";
 
     private static JButton backButton = new JButton("Back");
+
+    /**
+     * Constructor for Aboutscreen
+     */
     public Aboutscreen() {
         this.setLayout(null);
 
@@ -46,6 +50,10 @@ public class Aboutscreen extends JPanel {
         this.add(backButton);
     }
 
+    /**
+     * graphical output for the Aboutscreen
+     * @param aG the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics aG)
     {
@@ -53,7 +61,7 @@ public class Aboutscreen extends JPanel {
         try {
 
             //für den Hintergrund
-            BufferedImage image = ImageIO.read(new File("background.png"));
+            BufferedImage image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/background.png"));
             aG.drawImage(image,-50,-50,1000,1000,null);
 
         } catch (Exception e) {

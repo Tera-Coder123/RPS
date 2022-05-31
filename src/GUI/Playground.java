@@ -19,18 +19,25 @@ public class Playground extends JPanel {
     private Timer timer;
     public static Grid grid;
 
+    /**
+     * Playground Constructor
+     */
     public Playground() {
         this.setLayout(null);
         refreshScreen();
     }
 
+    /**
+     * graphicl output playground
+     * @param graphics the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics graphics)
     {
         super.paintComponent(graphics);
 
         try {
-            BufferedImage image = image = ImageIO.read(new File("playground-background.png"));
+            BufferedImage image = image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/playground-background.png"));
             graphics.drawImage(image,-100,-100,800,800,null);
         } catch (Exception e) {
 
@@ -41,6 +48,9 @@ public class Playground extends JPanel {
         grid.paint(graphics);
     }
 
+    /**
+     * refresh to screen
+     */
     public void refreshScreen() {
         timer = new Timer(0, new ActionListener() {
             @Override

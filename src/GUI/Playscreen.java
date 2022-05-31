@@ -22,6 +22,9 @@ public class Playscreen extends JPanel {
     public static JLabel playerScore = new JLabel();
     public static JLabel playerScoreText = new JLabel();
 
+    /**
+     * Constructor of Playscreen
+     */
     public Playscreen() {
         this.setLayout(null);
 
@@ -51,6 +54,10 @@ public class Playscreen extends JPanel {
         this.add(playerScoreText);
     }
 
+    /**
+     * grphical output of Pllayscreen
+     * @param aG the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics aG)
     {
@@ -58,16 +65,16 @@ public class Playscreen extends JPanel {
         try {
 
             //für den Hintergrund
-            BufferedImage image = ImageIO.read(new File("background.png"));
+            BufferedImage image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/background.png"));
             aG.drawImage(image,-50,-50,1000,1000,null);
-            image = ImageIO.read(new File("TV.png"));
+            image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/TV.png"));
             aG.drawImage(image,-90,-160,1000,1000,null);
 
             BufferedImage imageDisplay = null;
             switch (FigureVariables.player.getType()) {
-                case ROCK -> imageDisplay = ImageIO.read(new File("stone.png"));
-                case PAPER -> imageDisplay = ImageIO.read(new File("paper.png"));
-                case SCISSOR -> imageDisplay = ImageIO.read(new File("scissors.png"));
+                case ROCK -> imageDisplay = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/stone.png"));
+                case PAPER -> imageDisplay = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/paper.png"));
+                case SCISSOR -> imageDisplay = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/scissors.png"));
             }
             aG.drawImage(imageDisplay,710,320,null);
         } catch (Exception e) {

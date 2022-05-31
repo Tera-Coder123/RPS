@@ -11,11 +11,19 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
+    /**
+     * Key Typed event
+     * @param e the event to be processed
+     */
     @Override
     public void keyTyped(KeyEvent e) {
 
     }
 
+    /**
+     * checked the input
+     * @param e the event to be processed
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         if(FigureVariables.player == null) return;
@@ -48,11 +56,21 @@ public class KeyHandler implements KeyListener {
         }
     }
 
+    /**
+     * Key Released
+     * @param e the event to be processed
+     */
     @Override
     public void keyReleased(KeyEvent e) {
 
     }
 
+    /**
+     * Check if the goal form the next move is a wall
+     * @param x
+     * @param y
+     * @return
+     */
     private boolean checkWall(int x, int y) {
         if(Grid.getBoxes()[x / 40][y / 40].isWall()) {
             return true;

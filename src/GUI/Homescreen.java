@@ -21,6 +21,9 @@ public class Homescreen extends JPanel {
     private static JButton playButton = new JButton("Play");
     private static JButton aboutButton = new JButton("About");
 
+    /**
+     * Constructor for Homescreen
+     */
     public Homescreen() {
         this.setLayout(null);
 
@@ -62,6 +65,10 @@ public class Homescreen extends JPanel {
         this.add(aboutButton);
     }
 
+    /**
+     * graphical output for Homescreen
+     * @param aG the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics aG)
     {
@@ -69,7 +76,7 @@ public class Homescreen extends JPanel {
         try {
 
             //für den Hintergrund
-            BufferedImage image = ImageIO.read(new File("background.png"));
+            BufferedImage image = ImageIO.read(getClass().getClassLoader().getResourceAsStream("img/background.png"));
             aG.drawImage(image,-50,-50,1000,1000,null);
 
         } catch (Exception e) {

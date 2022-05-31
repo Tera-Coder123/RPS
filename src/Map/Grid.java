@@ -17,6 +17,14 @@ public class Grid {
     private int x, y, boxSize, boxCountColumn, boxCountRow;
     private static Box[][] boxes;
 
+    /**
+     * Grid Constructor
+     * @param x
+     * @param y
+     * @param boxSize
+     * @param boxCountColumn
+     * @param boxCountRow
+     */
     public Grid(int x, int y, int boxSize, int boxCountColumn, int boxCountRow) {
         setX(x);
         setY(y);
@@ -28,6 +36,10 @@ public class Grid {
         FigureVariables.maze = new int[boxCountColumn][boxCountRow];
     }
 
+    /**
+     * graphical output for Grid
+     * @param graphics
+     */
     public void paint(Graphics graphics) {
         for (int column = 0; column < boxes.length; column++) {
             for (int row = 0; row < boxes[column].length; row++) {
@@ -39,6 +51,9 @@ public class Grid {
         FigureVariables.goal.paint(graphics);
     }
 
+    /**
+     * create the walls
+     */
     public void createWalls() {
         for (int i = 0; i <= 20; i++) {
             int randomX = (int)(Math.random() * 12) + 1;
@@ -48,6 +63,9 @@ public class Grid {
         }
     }
 
+    /**
+     * fill th Boxes with
+     */
     public void fillBoxes() {
         for (int column = 0; column < boxes.length; column++) {
             for (int row = 0; row < boxes[column].length; row++) {
@@ -66,12 +84,18 @@ public class Grid {
         FigureVariables.opponent.move();
     }
 
+    /**
+     * add player to the screen
+     */
     public void addPlayer() {
         FigureVariables.player = new Player(0 * 40, 0 * 40, FigureType.getRandomFigureType());
     }
 
     private final List<Integer> path = new ArrayList<>();
 
+    /**
+     * add opponent to the screen
+     */
     public void addOpponent() {
         switch (FigureVariables.player.getType()) {
             case ROCK -> FigureVariables.opponent = new Opponent(360, 480, FigureType.PAPER);
@@ -80,6 +104,9 @@ public class Grid {
         }
     }
 
+    /**
+     * add the Goal to the screen
+     */
     public static void addGoal() {
         Random random = new Random();
 
@@ -98,6 +125,12 @@ public class Grid {
         }
     }
 
+    /**
+     * check if wall is at the Postion
+     * @param x
+     * @param y
+     * @return
+     */
     public static boolean checkWall(int x, int y) {
         if(Grid.getBoxes()[x / 40][y / 40].isWall()) {
             return true;
@@ -105,6 +138,9 @@ public class Grid {
         return false;
     }
 
+    /**
+     * reset the position of the Goal
+     */
     public static void resetGoal() {
         FigureVariables.goal = null;
         FigureVariables.player_points++;
@@ -112,47 +148,50 @@ public class Grid {
         addGoal();
     }
 
-    //Getter and Setter
+    /**
+     * set the X for the Grid
+     * @param x
+     */
     public void setX(int x) {
         this.x = x;
     }
 
+    /**
+     * set the Y for the Grid
+     * @param y
+     */
     public void setY(int y) {
         this.y = y;
     }
 
+    /**
+     * ste the Box Count Column
+     * @param boxCount
+     */
     public void setBoxCountColumn(int boxCount) {
         this.boxCountColumn = boxCount;
     }
 
+    /**
+     * ste Box Count Row
+     * @param boxCountRow
+     */
     public void setBoxCountRow(int boxCountRow) {
         this.boxCountRow = boxCountRow;
     }
 
+    /**
+     * set the Size for Box
+     * @param boxSize
+     */
     public void setBoxSize(int boxSize) {
         this.boxSize = boxSize;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getBoxCountColumn() {
-        return boxCountColumn;
-    }
-
-    public int getBoxCountRow() {
-        return boxCountRow;
-    }
-
-    public int getBoxSize() {
-        return boxSize;
-    }
-
+    /**
+     * ste the Boxes
+     * @return
+     */
     public static Box[][] getBoxes() {
         return boxes;
     }
