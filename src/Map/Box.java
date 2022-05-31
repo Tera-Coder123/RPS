@@ -103,7 +103,7 @@ public class Box {
 
     /**
      * return if isWall
-     * @return
+     * @return isWall
      */
     public boolean isWall() {
         return isWall;
@@ -111,7 +111,7 @@ public class Box {
 
     /**
      * return if isFilled
-     * @return
+     * @return filled
      */
     public boolean isFilled() {
         return filled;
