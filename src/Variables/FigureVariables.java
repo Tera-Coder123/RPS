@@ -1,6 +1,9 @@
+/***
+ * @author Maximilian Raidl
+ * @version 1.0
+ */
 package Variables;
 
-import Figure.FigureType;
 import Figure.Goal;
 import Figure.Opponent;
 import Figure.Player;

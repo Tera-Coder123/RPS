@@ -10,12 +10,9 @@ import Map.Grid;
 import Variables.MainFrameVariables;
 import Variables.MapVariables;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class MainFrame extends JFrame {
     public static MainFrame mainFrame;

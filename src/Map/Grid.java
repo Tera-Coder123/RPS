@@ -1,14 +1,16 @@
+/***
+ * @author Maximilian Raidl
+ * @version 1.0
+ */
 package Map;
 
 import Figure.*;
-import GUI.Playground;
 import GUI.Playscreen;
 import Variables.FigureVariables;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 public class Grid {

@@ -1,10 +1,11 @@
+/***
+ * @author Maximilian Raidl
+ * @version 1.0
+ */
 package GUI;
 
-
 import Figure.GoalManager;
-import Figure.KeyHandler;
 import Map.Grid;
-import Variables.MapVariables;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,7 +14,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.security.Key;
 
 public class Playground extends JPanel {
     private Timer timer;

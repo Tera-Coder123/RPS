@@ -6,8 +6,12 @@ package Main;
 
 import GUI.MainFrame;
 
-public class MainClass {
+public class MainClass{
     public static void main(String[] args) {
-        MainFrame.mainFrame = new MainFrame();
+       Game rsp = new Game();
+       rsp.setName("Rock Paper Scissors");
+       rsp.setAuthor("Maximilian Raidl");
+       rsp.setDescription("A small 2D Game with awsome graphics :)");
+       rsp.run();
     }
 }

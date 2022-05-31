@@ -16,16 +16,16 @@ import java.io.File;
 
 public class Aboutscreen extends JPanel {
     private static JLabel aboutscreenLable = new JLabel();
-    private static String aboutscreenText = "by Maximilian Raidl";
+    private static String aboutscreenText = "<html><body>by Maximilian Raidl<br>ein SEW-Projekt<br>Auftrag: Professor Gaisberger</body></html>";
 
     private static JButton backButton = new JButton("Back");
     public Aboutscreen() {
         this.setLayout(null);
 
         aboutscreenLable.setText(aboutscreenText);
-        aboutscreenLable.setBounds(0,100,800,50);
+        aboutscreenLable.setBounds(0,100,800,500);
         aboutscreenLable.setHorizontalAlignment(JLabel.CENTER);
-        aboutscreenLable.setVerticalTextPosition(JLabel.CENTER);
+        //aboutscreenLable.setVerticalTextPosition(JLabel.CENTER);
         aboutscreenLable.setForeground(Color.black);
         aboutscreenLable.setFont(new Font(MainFrameVariables.FONT, Font.BOLD, 35));
 

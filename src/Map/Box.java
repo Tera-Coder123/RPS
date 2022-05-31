@@ -1,7 +1,9 @@
+/***
+ * @author Maximilian Raidl
+ * @version 1.0
+ */
 package Map;
 
-import Figure.FigureType;
-import Figure.Player;
 import Variables.MapVariables;
 
 import javax.imageio.ImageIO;

@@ -1,19 +1,3 @@
 
 7
 RPS.iml,d\d\dd3f8b08e466f0a97e29c64b07116ace85bc0740
-H
-src/GUI/Aboutscreen.java,d\c\dc3ef52188b1603875e2bae5459ea4f5ee09b6fa
-J
-src/Figure/FigureType.java,c\9\c90c482e569723214902998d1ff90875e208d77f
-D
-src/Figure/Goal.java,2\9\2991f175af76fed83544fc7a05373b53b517f628
-K
-src/Figure/GoalManager.java,f\d\fde1a7a0685b44d5a5a48f17fed5d60d43d4f87d
-U
-%src/Variables/MainFrameVariables.java,c\d\cd5ac2bdd99bc482b96c76ff563c82a27c74e3d4
-O
-src/Variables/MapVariables.java,f\b\fb41154c6636273efa38d464febbbff0d65dc77a
-H
-src/Figure/Opponent.java,3\8\38aa4ee18e59f04dc39b4839c0e6ae5e637e26b8
-F
-src/Figure/Player.java,d\3\d30cc9ac0f33cc613e01a01faad1cd971223a0ef

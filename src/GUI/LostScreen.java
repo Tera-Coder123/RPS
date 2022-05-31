@@ -1,3 +1,7 @@
+/***
+ * @author Maximilian Raidl
+ * @version 1.0
+ */
 package GUI;
 
 import Variables.FigureVariables;
