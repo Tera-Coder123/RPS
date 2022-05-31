@@ -68,7 +68,6 @@ public class MainFrame extends JFrame {
     public static void goToPlayScreen() {
         Playground.grid = new Grid(0,0, MapVariables.BOX_SIZE,14,11);
         Playground.grid.fillBoxes();
-        Playground.grid.createWalls();
 
         mainFrame.remove(new Homescreen());
         Playscreen.playscreen = new Playscreen();

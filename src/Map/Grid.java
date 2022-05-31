@@ -1,6 +1,7 @@
 package Map;
 
 import Figure.*;
+import GUI.Playground;
 import GUI.Playscreen;
 import Variables.FigureVariables;
 
@@ -54,6 +55,9 @@ public class Grid {
                 boxes[column][row] = box;
             }
         }
+
+        createWalls();
+
         addPlayer();
         addOpponent();
         addGoal();
@@ -80,14 +84,23 @@ public class Grid {
         int randomX = random.nextInt(boxes.length - 1) * 40;
         int randomY = random.nextInt(boxes[0].length - 1)  * 40;
 
-        System.out.println("X: " + randomX / 40 + " Y:" + randomY / 40);
-        System.out.println("Die BOX ist ..." + boxes[randomX / 40][randomY / 40].isWall());
+        while (checkWall(randomX,randomY)) {
+            randomX = random.nextInt(boxes.length - 1) * 40;
+            randomY = random.nextInt(boxes[0].length - 1) * 40;
+        }
 
         switch (FigureVariables.player.getType()) {
             case ROCK -> FigureVariables.goal = new Goal(randomX,randomY,FigureType.SCISSOR);
             case PAPER -> FigureVariables.goal = new Goal(randomX,randomY,FigureType.ROCK);
             case SCISSOR -> FigureVariables.goal = new Goal(randomX,randomY,FigureType.PAPER);
         }
+    }
+
+    public static boolean checkWall(int x, int y) {
+        if(Grid.getBoxes()[x / 40][y / 40].isWall()) {
+            return true;
+        }
+        return false;
     }
 
     public static void resetGoal() {

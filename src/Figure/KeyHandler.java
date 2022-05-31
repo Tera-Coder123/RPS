@@ -49,7 +49,7 @@ public class KeyHandler implements KeyListener {
 
     }
 
-    public boolean checkWall(int x, int y) {
+    private boolean checkWall(int x, int y) {
         if(Grid.getBoxes()[x / 40][y / 40].isWall()) {
             return true;
         }
