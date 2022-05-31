@@ -12,7 +12,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class Player {
+public class Player extends Figure{
     private int x,y;
     private FigureType type;
 
@@ -23,6 +23,7 @@ public class Player {
      * @param type
      */
     public Player(int x, int y,FigureType type) {
+        super(x,y,type);
         setX(x);
         setY(x);
         setType(type);
@@ -44,53 +45,5 @@ public class Player {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * set X for Player
-     * @param x
-     */
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    /**
-     * get X from Player
-     * @return
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * set Y for Player
-     * @param y
-     */
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    /**
-     * get Y from Player
-     * @return
-     */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * set Type for Player
-     * @param type
-     */
-    public void setType(FigureType type) {
-        this.type = type;
-    }
-
-    /**
-     * get Type from Player
-     * @return
-     */
-    public FigureType getType() {
-        return type;
     }
 }

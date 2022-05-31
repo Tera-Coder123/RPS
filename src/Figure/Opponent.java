@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class Opponent {
+public class Opponent extends Figure{
     private int x,y;
     private FigureType type;
     private Timer timer;
@@ -28,6 +28,7 @@ public class Opponent {
      * @param type
      */
     public Opponent(int x, int y,FigureType type) {
+        super(x,y,type);
         setX(x);
         setY(x);
         setType(type);
@@ -75,51 +76,4 @@ public class Opponent {
         timer.start();
     }
 
-    /**
-     * set x for Opponent
-     * @param x
-     */
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    /**
-     * get X from Opponent
-     * @return
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * set Y for Opponent
-     * @param y
-     */
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    /**
-     * get Y from Opponent
-     * @return
-     */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * set Type for Opponent
-     * @param type
-     */
-    public void setType(FigureType type) {
-        this.type = type;
-    }
-
-    /**
-     * get Type from Opponent
-     * @return
-     */
-    public FigureType getType() {
-        return type;
-    }
 }

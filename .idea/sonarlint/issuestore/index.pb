@@ -3,3 +3,27 @@
 RPS.iml,d\d\dd3f8b08e466f0a97e29c64b07116ace85bc0740
 C
 Main/MainClass.java,8\5\85bd5ee36d281fb13b70488ca622b732f1dbb883
+F
+src/Main/_IMyGame.java,a\7\a7c831ea1c1005bdb02a336c1da1a54b8690f5bc
+R
+"src/Variables/FigureVariables.java,6\0\603ff7692bace4d910e297cda2a475d9c93bc51c
+U
+%src/Variables/MainFrameVariables.java,c\d\cd5ac2bdd99bc482b96c76ff563c82a27c74e3d4
+O
+src/Variables/MapVariables.java,f\b\fb41154c6636273efa38d464febbbff0d65dc77a
+K
+.idea/artifacts/RPS_jar.xml,5\4\54d58d6076195d6bcc6fecf36313b1218b1efedd
+H
+src/META-INF/MANIFEST.MF,e\4\e4b1fd2293ba1e598e6bec4e0ee3b6b6851eb5a2
+H
+src/GUI/Aboutscreen.java,d\c\dc3ef52188b1603875e2bae5459ea4f5ee09b6fa
+B
+src/Main/Game.java,c\3\c32b60e882d1f4309d2524ae7312dc8b0ff981c7
+K
+src/Figure/GoalManager.java,f\d\fde1a7a0685b44d5a5a48f17fed5d60d43d4f87d
+G
+src/GUI/Homescreen.java,b\0\b03f6100e338d785472fb0fd658c49852ec77796
+J
+src/Figure/KeyHandler.java,4\5\45a332efa1c8aa37a4b3ae3b706ede957bbd9916
+G
+src/Main/MainClass.java,f\e\febeb8810350a80130d8e7f6a09d23ea8b04e556
