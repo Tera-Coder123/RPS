@@ -50,7 +50,7 @@ public class Game implements _IMyGame {
      */
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     /**
@@ -59,7 +59,7 @@ public class Game implements _IMyGame {
      */
     @Override
     public String getDescription() {
-        return null;
+        return description;
     }
 
     /**
@@ -68,6 +68,6 @@ public class Game implements _IMyGame {
      */
     @Override
     public String getAuthor() {
-        return null;
+        return author;
     }
 }
