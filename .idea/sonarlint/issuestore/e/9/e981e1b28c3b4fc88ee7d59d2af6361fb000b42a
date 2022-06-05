@@ -1,0 +1,19 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İØ˜úÿÿÿÿ
+\
+java:S3252"AUse static access with "javax.swing.SwingConstants" for "CENTER".(³åĞœşÿÿÿÿ
+W
+java:S3252"AUse static access with "javax.swing.SwingConstants" for "CENTER".(·†›•
+W
+java:S3252$"AUse static access with "javax.swing.SwingConstants" for "CENTER".(øéµœ
+W
+java:S3252%"AUse static access with "javax.swing.SwingConstants" for "CENTER".(ùè¸
+V
+java:S3252+"AUse static access with "javax.swing.SwingConstants" for "CENTER".(ùÁ¨Y
+W
+java:S3252,"AUse static access with "javax.swing.SwingConstants" for "CENTER".(ÒŠ¶ğ
+>	java:S108?")Either remove or fill this block of code.(”ı¾
+M
+java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘
+P
+java:S1128":Remove this unused import 'java.awt.event.ActionListener'.(Ìä¹
